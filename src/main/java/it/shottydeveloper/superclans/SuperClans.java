@@ -59,7 +59,7 @@ public class SuperClans extends JavaPlugin {
             return;
         }
 
-        // inizializziamo il database se fallisce il plugin worka
+        // inizializziamo il database se fallisce il plugin non worka
         if (!initDatabase()) {
             getLogger().severe("Impossibile connettersi al database! Controlla le impostazioni in config.yml");
             getLogger().severe("Disabilitando il plugin...");
