@@ -1,0 +1,87 @@
+database:
+  # Tipo di database: mariadb o mysql
+  type: mariadb
+  # Host del server MariaDB/MySQL
+  host: localhost
+  # Porta del database (default: 3306)
+  port: 3306
+  # Nome del database da usare
+  name: superclans
+  # Username per la connessione
+  username: root
+  # Password per la connessione
+  password: password
+  # Prefisso per le tabelle (utile se condividi il db con altri plugin)
+  table-prefix: sc_
+  # Numero massimo di connessioni nel pool
+  pool-size: 10
+  # Timeout connessione in millisecondi
+  connection-timeout: 30000
+
+# Impostazioni generali del clan
+clan:
+  # Numero minimo di caratteri per il nome del clan
+  min-name-length: 3
+  # Numero massimo di caratteri per il nome del clan
+  max-name-length: 20
+  # Lunghezza minima del tag clan
+  min-tag-length: 2
+  # Lunghezza massima del tag clan
+  max-tag-length: 5
+  # Numero massimo di membri per clan (0 = illimitato)
+  max-members: 20
+  # Numero massimo di territori che un clan puo reclamare
+  max-claims: 10
+  # Caratteri permessi nel nome del clan (regex)
+  allowed-name-chars: "[a-zA-Z0-9_]"
+  # Caratteri permessi nel tag clan
+  allowed-tag-chars: "[a-zA-Z0-9]"
+
+# Impostazioni inviti
+invites:
+  # Durata dell'invito in secondi prima che scada
+  expire-seconds: 60
+
+# Impostazioni teletrasporto
+teleport:
+  # Ritardo prima del teletrasporto in secondi (0 = istantaneo)
+  delay: 3
+  # Se il teletrasporto viene annullato quando il giocatore si muove
+  cancel-on-move: true
+
+# Impostazioni territorio
+territory:
+  # Se usare WorldGuard per la protezione (richiede WorldGuard installato) altrimenti usa il sistema custom del Plugin
+  use-worldguard: true
+  # Claim multiplo: 0 = solo il chunk corrente, 1 = 3x3 chunk, 2 = 5x5 chunk, ecc.
+  claim-radius-chunks: 0
+  # Se true, dopo /clan claim disegna il perimetro con un blocco (solo visivo)
+  outline:
+    enabled: true
+    # Materiale Bukkit, es: GREEN_CONCRETE, GLOWSTONE, RED_WOOL...
+    material: GREEN_CONCRETE
+    # Durata in secondi (0 = permanente)
+    duration-seconds: 0
+  # Se gli admin (OP o permesso superclans.admin) possono bypassare le protezioni
+  admin-bypass: true
+  # Protezioni attive sui territori del clan (usate con il sistema custom)
+  protections:
+    block-break: true
+    block-place: true
+    pvp: false
+    mob-spawning: false
+    explosions: true
+    fire-spread: true
+
+# Impostazioni chat clan
+chat:
+  # Formato della chat del clan
+  # Variabili: {role}, {player}, {message}, {clan}, {tag}
+  format: "&8[&6{tag}&8] &7[{role}] &f{player}&8: &a{message}"
+  # Se abilitare la chat globale con prefisso del clan
+  global-prefix: true
+  # Formato del prefisso nella chat globale
+  global-format: "&8[&6{tag}&8] &f{player}&7: &f{message}"
+
+# Impostazioni debug
+debug: false

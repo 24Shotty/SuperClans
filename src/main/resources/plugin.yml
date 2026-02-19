@@ -1,0 +1,73 @@
+name: SuperClans
+version: '1.0'
+main: it.shottydeveloper.superclans.SuperClans
+api-version: 1.20
+authors: [ 24Shotty ]
+description: Plugin per la gestione dei Clan e territori
+
+softdepend:
+  - PlaceholderAPI
+  - WorldGuard
+  - WorldEdit
+
+commands:
+  clan:
+    description: Comando principale per la gestione dei Clan
+    usage: /clan <subcomando> [argomenti]
+    aliases:
+      - clans
+      - c
+
+permissions:
+  superclans.clan.create:
+    description: Permesso per creare un clan
+    default: true
+  superclans.clan.disband:
+    description: Permesso per sciogliere il proprio clan
+    default: true
+  superclans.clan.invite:
+    description: Permesso per invitare giocatori
+    default: true
+  superclans.clan.kick:
+    description: Permesso per espellere membri
+    default: true
+  superclans.clan.promote:
+    description: Permesso per promuovere membri
+    default: true
+  superclans.clan.demote:
+    description: Permesso per retrocedere membri
+    default: true
+  superclans.clan.chat:
+    description: Permesso per usare la chat del clan
+    default: true
+  superclans.clan.claim:
+    description: Permesso per reclamare un territorio
+    default: true
+  superclans.clan.unclaim:
+    description: Permesso per liberare un territorio
+    default: true
+  superclans.clan.home:
+    description: Permesso per teletrasportarsi alla home del clan
+    default: true
+  superclans.clan.sethome:
+    description: Permesso per impostare la home del clan
+    default: true
+  superclans.clan.info:
+    description: Permesso per vedere le informazioni di un clan
+    default: true
+  superclans.admin:
+    description: Permesso amministrativo per tutte le funzioni
+    default: op
+    children:
+      superclans.clan.create: true
+      superclans.clan.disband: true
+      superclans.clan.invite: true
+      superclans.clan.kick: true
+      superclans.clan.promote: true
+      superclans.clan.demote: true
+      superclans.clan.chat: true
+      superclans.clan.claim: true
+      superclans.clan.unclaim: true
+      superclans.clan.home: true
+      superclans.clan.sethome: true
+      superclans.clan.info: true

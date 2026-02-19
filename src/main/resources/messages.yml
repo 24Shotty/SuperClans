@@ -1,0 +1,109 @@
+prefix: "&8[&6SuperClans&8] "
+
+general:
+  players-only: "&cSolo i giocatori possono usare questo comando."
+  usage: "&eUso: /clan <create|invite|kick|promote|demote|chat|claim|unclaim|home|sethome|info|disband> [argomenti]"
+  unknown-command: "&cComando sconosciuto. Usa /clan per la lista dei comandi."
+  no-permission: "&cNon hai il permesso per eseguire questa azione."
+  must-be-in-clan: "&cDevi essere in un clan per usare questo comando."
+  must-be-leader: "&cSolo il leader del clan può eseguire questa azione."
+  must-be-officer-or-higher: "&cDevi essere Officer o superiore per eseguire questa azione."
+  player-not-found: "&cGiocatore &e{player} &cnon trovato o non online."
+  error-occurred: "&cSi è verificato un errore. Riprova più tardi."
+
+create:
+  usage: "&cUso: /clan create <nome> <tag>"
+  already-in-clan: "&cSei già in un clan. Lascialo prima di crearne uno nuovo."
+  name-too-short: "&cIl nome del clan deve avere almeno {min} caratteri."
+  name-too-long: "&cIl nome del clan non può superare {max} caratteri."
+  name-invalid-chars: "&cIl nome contiene caratteri non consentiti."
+  tag-too-short: "&cIl tag deve avere almeno {min} caratteri."
+  tag-too-long: "&cIl tag non può superare {max} caratteri."
+  tag-invalid-chars: "&cIl tag contiene caratteri non consentiti."
+  name-taken: "&cUn clan con nome &e{clan} &cè già esistente."
+  tag-taken: "&cIl tag &e{tag} &cè già in uso."
+  success: "&aHai creato il clan &e{clan} &acon tag &e{tag}&a!"
+
+disband:
+  confirm: "&eSei sicuro di voler sciogliere &6{clan}&e? Scrivi &c/clan disband confirm &eper confermare."
+  success: "&aIl clan &e{clan} &aè stato sciolto."
+  broadcast: "&cIl clan {clan} è stato sciolto dal leader."
+
+invite:
+  usage: "&cUso: /clan invite <giocatore>"
+  cannot-invite-self: "&cNon puoi invitare te stesso!"
+  already-in-clan: "&c{player} è già in un clan."
+  clan-full: "&cIl clan ha raggiunto il numero massimo di membri."
+  already-invited: "&c{player} ha già un invito pendente per questo clan."
+  sent: "&aInvito inviato a &e{player}&a."
+  received: "&aSei stato invitato nel clan &e{clan}&a! Scrivi &e/clan accept &aper accettare o &e/clan deny &aper rifiutare. L'invito scade tra {seconds} secondi."
+  expired: "&cL'invito al clan {clan} è scaduto."
+  no-pending: "&cNon hai inviti pendenti."
+  accepted-receiver: "&aSei entrato nel clan &e{clan}&a!"
+  denied-receiver: "&eHai rifiutato l'invito al clan &6{clan}&e."
+  broadcast-join: "&a{player} è entrato nel clan!"
+
+kick:
+  usage: "&cUso: /clan kick <giocatore> [confirm]"
+  confirm: "&eScrivi &c/clan kick {player} confirm &eper confermare l'espulsione."
+  confirm-expired: "&cLa conferma è scaduta. Riprova con /clan kick <giocatore>."
+  cannot-kick-self: "&cNon puoi espellere te stesso!"
+  player-not-in-clan: "&c{player} non è nel tuo clan."
+  cannot-kick-leader: "&cNon puoi espellere il leader del clan."
+  cannot-kick-higher-rank: "&cNon puoi espellere un membro con un rango uguale o superiore al tuo."
+  success-kicker: "&aHai espulso &e{player} &adal clan."
+  success-kicked: "&cSei stato espulso dal clan &e{clan}&c."
+  broadcast: "&c{player} è stato espulso dal clan da {kicker}."
+
+promote:
+  usage: "&cUso: /clan promote <giocatore>"
+  cannot-promote-self: "&cNon puoi promuovere te stesso!"
+  already-max: "&c{player} ha già il rango massimo."
+  success: "&aHai promosso &e{player} &aa &e{role}&a."
+  broadcast: "&e{player} è stato promosso a {role} da {promoter}."
+
+demote:
+  usage: "&cUso: /clan demote <giocatore>"
+  cannot-demote-self: "&cNon puoi retrocedere te stesso!"
+  already-min: "&c{player} ha già il rango minimo."
+  success: "&aHai retrocesso &e{player} &aa &e{role}&a."
+  broadcast: "&e{player} è stato retrocesso a {role} da {demoter}."
+
+chat:
+  toggle-on: "&aChat del clan attivata. I messaggi saranno inviati solo ai membri del clan."
+  toggle-off: "&cChat del clan disattivata."
+  no-members-online: "&cNessun altro membro del clan è online per ricevere il messaggio."
+
+claim:
+  already-claimed-own: "&cQuesto territorio appartiene già al tuo clan."
+  already-claimed-other: "&cQuesto territorio appartiene al clan &e{clan}&c."
+  max-claims-reached: "&cIl tuo clan ha raggiunto il limite massimo di territori ({max})."
+  success: "&aHai reclamato questo territorio per &e{clan}&a!"
+  success-multi: "&aHai reclamato &e{count} &aterritori per &e{clan}&a!"
+  broadcast: "&e{player} ha reclamato &6{count} &enuovo/i territorio/i per il clan."
+
+unclaim:
+  not-claimed: "&cQuesto territorio non appartiene al tuo clan."
+  success: "&aHai liberato questo territorio."
+  broadcast: "&e{player} ha liberato un territorio del clan."
+
+home:
+  no-home: "&cIl clan non ha una home impostata."
+  teleporting: "&eTeletrasporto in corso... Resta fermo per {seconds} secondi!"
+  cancelled: "&cTeletrasporto annullato: ti sei mosso."
+  teleported: "&aSei stato teletrasportato alla home del clan."
+
+sethome:
+  success: "&aHome del clan impostata nella tua posizione attuale."
+  broadcast: "&e{player} ha impostato la nuova home del clan."
+
+info:
+  clan-not-found: "&cClan &e{search} &cnon trovato."
+  header: "&6&l--- {clan} ---"
+  tag: "&7Tag: &e{tag}"
+  leader: "&7Leader: &e{leader}"
+  members: "&7Membri: &e{count}"
+  territories: "&7Territori: &e{count}"
+  home-set: "&7Home: &aImpostata"
+  home-not-set: "&7Home: &cNon impostata"
+  members-list: "&7Lista membri: &f{list}"
