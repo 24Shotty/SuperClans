@@ -245,7 +245,7 @@ Tutte le tabelle utilizzano foreign key con eliminazione CASCADE per l'integrit√
 
 1. **Clona il repository**
    ```bash
-   git clone https://github.com/yourusername/SuperClans.git
+   git clone https://github.com/24Shotty/SuperClans.git
    cd SuperClans
    ```
 
