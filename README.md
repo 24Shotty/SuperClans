@@ -46,7 +46,7 @@ Plugin completo e robusto per Bukkit/Spigot per la gestione di clan con sistema 
 ## Installazione
 
 1. **Scarica il plugin**
-   - Scarica l'ultima release dalla pagina [Releases](https://github.com/yourusername/SuperClans/releases)
+   - Scarica l'ultima release dalla pagina [Releases](https://github.com/24Shotty/SuperClans/releases)
    - Oppure compila dal sorgente (vedi [Compilazione dal Sorgente](#compilazione-dal-sorgente))
 
 2. **Installa il plugin**
@@ -357,7 +357,7 @@ Questo progetto è licenziato sotto la MIT License - vedi il file LICENSE per i 
 
 Per problemi, domande o suggerimenti:
 
-- Apri un issue su [GitHub Issues](https://github.com/yourusername/SuperClans/issues)
+- Apri un issue su [GitHub Issues](https://github.com/24Shotty/SuperClans/issues)
 - Controlla gli issue esistenti prima di crearne uno nuovo
 - Fornisci informazioni dettagliate sul tuo problema
 
